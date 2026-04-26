@@ -1,0 +1,491 @@
+[
+  {
+    "question": "What is the sum of total_sales across all orders?",
+    "expected_sql_contains": [
+      "SUM",
+      "total_sales"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "Total revenue from all sales",
+    "expected_sql_contains": [
+      "SUM",
+      "total_sales"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "Combine all total_sales into one number",
+    "expected_sql_contains": [
+      "SUM",
+      "total_sales"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "How many orders are in the sales table?",
+    "expected_sql_contains": [
+      "COUNT",
+      "sales"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "Count every row in sales",
+    "expected_sql_contains": [
+      "COUNT"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "What is the average unit_price?",
+    "expected_sql_contains": [
+      "AVG",
+      "unit_price"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "Mean unit price",
+    "expected_sql_contains": [
+      "AVG",
+      "unit_price"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "Average quantity sold per line",
+    "expected_sql_contains": [
+      "AVG",
+      "quantity"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "What is the maximum total_sales?",
+    "expected_sql_contains": [
+      "MAX",
+      "total_sales"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "Largest single order total_sales",
+    "expected_sql_contains": [
+      "MAX",
+      "total_sales"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "Minimum total_sales amount",
+    "expected_sql_contains": [
+      "MIN",
+      "total_sales"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "How many distinct customers appear?",
+    "expected_sql_contains": [
+      "COUNT",
+      "customer_id"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "Count distinct customer_id values",
+    "expected_sql_contains": [
+      "DISTINCT",
+      "customer_id"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "Show total sales grouped by region",
+    "expected_sql_contains": [
+      "region",
+      "GROUP BY",
+      "SUM"
+    ],
+    "expected_row_count": 4
+  },
+  {
+    "question": "What were total sales by region?",
+    "expected_sql_contains": [
+      "region",
+      "GROUP BY"
+    ],
+    "expected_row_count": 4
+  },
+  {
+    "question": "Sales totals for each region",
+    "expected_sql_contains": [
+      "region",
+      "SUM"
+    ],
+    "expected_row_count": 4
+  },
+  {
+    "question": "Break down revenue by region",
+    "expected_sql_contains": [
+      "region",
+      "GROUP BY"
+    ],
+    "expected_row_count": 4
+  },
+  {
+    "question": "Total sales for each product_category",
+    "expected_sql_contains": [
+      "product_category",
+      "GROUP BY",
+      "SUM"
+    ],
+    "expected_row_count": 3
+  },
+  {
+    "question": "Revenue by product category",
+    "expected_sql_contains": [
+      "product_category",
+      "SUM"
+    ],
+    "expected_row_count": 3
+  },
+  {
+    "question": "Aggregate total_sales by category",
+    "expected_sql_contains": [
+      "product_category",
+      "GROUP BY"
+    ],
+    "expected_row_count": 3
+  },
+  {
+    "question": "List each product_name with its total sales",
+    "expected_sql_contains": [
+      "product_name",
+      "SUM"
+    ],
+    "expected_row_count": 6
+  },
+  {
+    "question": "Sum quantity grouped by region",
+    "expected_sql_contains": [
+      "region",
+      "quantity"
+    ],
+    "expected_row_count": 4
+  },
+  {
+    "question": "Top line: sum quantity by region",
+    "expected_sql_contains": [
+      "quantity",
+      "region",
+      "SUM"
+    ],
+    "expected_row_count": 4
+  },
+  {
+    "question": "What were total sales in January 2024?",
+    "expected_sql_contains": [
+      "total_sales",
+      "2024"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "Count orders in January 2024",
+    "expected_sql_contains": [
+      "2024-01",
+      "COUNT"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "How many sales records exist?",
+    "expected_sql_contains": [
+      "COUNT"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "What are the distinct regions?",
+    "expected_sql_contains": [
+      "region"
+    ],
+    "expected_row_count": 4
+  },
+  {
+    "question": "List distinct region values",
+    "expected_sql_contains": [
+      "DISTINCT",
+      "region"
+    ],
+    "expected_row_count": 4
+  },
+  {
+    "question": "Total sales grouped by region and product_category",
+    "expected_sql_contains": [
+      "region",
+      "product_category",
+      "SUM"
+    ],
+    "expected_row_count": 12
+  },
+  {
+    "question": "Sales by region and category",
+    "expected_sql_contains": [
+      "region",
+      "product_category"
+    ],
+    "expected_row_count": 12
+  },
+  {
+    "question": "Select all columns from sales limit 10",
+    "expected_sql_contains": [
+      "LIMIT",
+      "10"
+    ],
+    "expected_row_count": 10
+  },
+  {
+    "question": "Show 5 rows from sales",
+    "expected_sql_contains": [
+      "LIMIT",
+      "5"
+    ],
+    "expected_row_count": 5
+  },
+  {
+    "question": "First 20 orders by order_date",
+    "expected_sql_contains": [
+      "LIMIT",
+      "20"
+    ],
+    "expected_row_count": 20
+  },
+  {
+    "question": "How many orders are in the North region?",
+    "expected_sql_contains": [
+      "North",
+      "COUNT"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "Count sales rows where region equals North",
+    "expected_sql_contains": [
+      "North",
+      "COUNT"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "Total sales in the South region",
+    "expected_sql_contains": [
+      "South",
+      "SUM"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "Show total sales by calendar month in 2024",
+    "expected_sql_contains": [
+      "total_sales",
+      "GROUP BY"
+    ],
+    "expected_row_count": 3
+  },
+  {
+    "question": "Average unit_price by product_category",
+    "expected_sql_contains": [
+      "AVG",
+      "product_category"
+    ],
+    "expected_row_count": 3
+  },
+  {
+    "question": "Max quantity by region",
+    "expected_sql_contains": [
+      "MAX",
+      "region"
+    ],
+    "expected_row_count": 4
+  },
+  {
+    "question": "What is the sum of quantity across all rows?",
+    "expected_sql_contains": [
+      "SUM",
+      "quantity"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "What is the lowest unit_price?",
+    "expected_sql_contains": [
+      "MIN",
+      "unit_price"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "Count distinct product_name",
+    "expected_sql_contains": [
+      "DISTINCT",
+      "product_name"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "Aggregate sum of total_sales",
+    "expected_sql_contains": [
+      "SUM",
+      "total_sales"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "Report count of orders",
+    "expected_sql_contains": [
+      "COUNT"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "Compute average of unit_price",
+    "expected_sql_contains": [
+      "AVG",
+      "unit_price"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "Give me max total_sales",
+    "expected_sql_contains": [
+      "MAX",
+      "total_sales"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "Smallest unit_price in the dataset",
+    "expected_sql_contains": [
+      "MIN",
+      "unit_price"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "Sum quantities for West region",
+    "expected_sql_contains": [
+      "West",
+      "SUM",
+      "quantity"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "East region total_sales sum",
+    "expected_sql_contains": [
+      "East",
+      "SUM"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "Group sales by region and show sum of total_sales",
+    "expected_sql_contains": [
+      "GROUP BY",
+      "region"
+    ],
+    "expected_row_count": 4
+  },
+  {
+    "question": "For each product_category show sum total_sales",
+    "expected_sql_contains": [
+      "product_category",
+      "SUM"
+    ],
+    "expected_row_count": 3
+  },
+  {
+    "question": "Total quantity grouped by product_category",
+    "expected_sql_contains": [
+      "quantity",
+      "product_category"
+    ],
+    "expected_row_count": 3
+  },
+  {
+    "question": "Average total_sales per order line",
+    "expected_sql_contains": [
+      "AVG",
+      "total_sales"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "How many unique order_id values exist?",
+    "expected_sql_contains": [
+      "COUNT",
+      "order_id"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "Distinct regions count",
+    "expected_sql_contains": [
+      "COUNT",
+      "region"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "List regions with their order counts",
+    "expected_sql_contains": [
+      "region",
+      "COUNT"
+    ],
+    "expected_row_count": 4
+  },
+  {
+    "question": "Sales in February 2024 total",
+    "expected_sql_contains": [
+      "2024-02",
+      "SUM"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "March 2024 revenue sum",
+    "expected_sql_contains": [
+      "2024-03",
+      "total_sales"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "Apparel items count",
+    "expected_sql_contains": [
+      "Apparel",
+      "COUNT"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "Food category row count",
+    "expected_sql_contains": [
+      "Food",
+      "COUNT"
+    ],
+    "expected_row_count": 1
+  },
+  {
+    "question": "Count Electronics category rows",
+    "expected_sql_contains": [
+      "Electronics",
+      "COUNT"
+    ],
+    "expected_row_count": 1
+  }
+]
