@@ -1,6 +1,7 @@
 # Natural Language BI Query Engine
 
-Full-stack demo: plain-English questions → **Claude** generates **SQLite** `SELECT` queries against a **retail sales** dataset; **FastAPI** runs them and returns results; **React** + **ECharts** charts the answer.
+Full-stack demo:
+plain-English questions → **Claude** generates **SQLite** `SELECT` queries against a **retail sales** dataset → **FastAPI** runs them and returns results → **React** + **ECharts** charts the answer.
 
 ## Prerequisites
 
